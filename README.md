@@ -1,6 +1,6 @@
-# Health Insurance Risk Calculator
+# Health Insurance Risk Calculator Server
 ## Information
-The developers of this project, Health Insurance Risk Calculator, are Benyamin Bamburac (benyaminfbamburac@lewisu.edu), Justin Ajuogu (Justinajuogu@lewisu.edu), and Aaron Rader (AaronRader@lewisu.edu).
+The developers of this project, Health Insurance Risk Calculator Server, are Benyamin Bamburac (benyaminfbamburac@lewisu.edu), Justin Ajuogu (Justinajuogu@lewisu.edu), and Aaron Rader (AaronRader@lewisu.edu).
 
 ## Statement of Originality
 All content in this project is original.
