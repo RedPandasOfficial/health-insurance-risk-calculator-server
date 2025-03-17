@@ -1,0 +1,23 @@
+{
+  "name": "health-insurance-risk-calculator-server",
+  "version": "1.0.0",
+  "description": "The developers of this project, Health Insurance Risk Calculator Server, are Benyamin Bamburac (benyaminfbamburac@lewisu.edu), Justin Ajuogu (justinajuogu@lewisu.edu), and Aaron Rader (aaronrader@lewisu.edu).",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedPandasOfficial/health-insurance-risk-calculator-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RedPandasOfficial/health-insurance-risk-calculator-server/issues"
+  },
+  "homepage": "https://github.com/RedPandasOfficial/health-insurance-risk-calculator-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
