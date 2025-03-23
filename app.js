@@ -13,34 +13,21 @@ app.get("/", (req, res) => {
 });
 
 // BMI Calculation Endpoint
-app.post("/api/calculateBMI", (req, res) => {
-    let { heightFeet, heightInches, weightPounds } = req.body;
+app.post("/api/calculate-bmi", (req, res) => {
+    let { height_feet, height_inches, weight_pounds } = req.query;
 
     // Convert inputs to numbers
-    heightFeet = parseFloat(heightFeet);
-    heightInches = parseFloat(heightInches);
-    weightPounds = parseFloat(weightPounds);
-
-    // Input Validation
-    if (
-        isNaN(heightFeet) || isNaN(heightInches) || isNaN(weightPounds) ||
-        heightFeet < 0 || heightInches < 0 || weightPounds <= 0
-    ) {
-        return res.status(400).json({ error: "Invalid input. Height and weight must be positive numbers." });
-    }
+    height_feet = parseInt(height_feet);
+    height_inches = parseInt(height_inches);
+    weight_pounds = parseInt(weight_pounds);
 
     // Convert height to inches
-    const totalInches = heightFeet * 12 + heightInches;
-
-    // Prevent division by zero
-    if (totalInches <= 0) {
-        return res.status(400).json({ error: "Height must be greater than zero." });
-    }
+    const total_inches = height_feet * 12 + height_inches;
 
     // Calculate BMI
-    const bmi = (weightPounds / (totalInches * totalInches)) * 703;
+    const bmi = (weight_pounds / (total_inches * total_inches)) * 703;
 
-    res.json({ bmi: bmi.toFixed(2) });
+    res.json({ bmi });
 });
 
 app.get("/score-risk", function(req, res) {
