@@ -11,6 +11,10 @@ app.get("/", function(req, res) {
 	res.sendFile("index.html", { root: __dirname });
 });
 
+app.get("/total-score-risk", function(req, res) {
+	// ouch!
+});
+
 app.listen(port, function() {
 	console.log(`Server running on http://localhost:${port}`);
 });
