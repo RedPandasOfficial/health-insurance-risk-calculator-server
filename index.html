@@ -17,7 +17,7 @@
 				`${window.location.origin}/score-risk?` +
 				`age=${age}&bmi=${bmi}&bp=${bp}&fd=${fd}`;
 			
-			console.log(query);
+			console.warn(query);
 			fetch(query)
 				.then(response => response.json())
 				.then(data => console.log(data))

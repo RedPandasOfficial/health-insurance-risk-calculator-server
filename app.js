@@ -13,7 +13,8 @@ app.get("/", function(req, res) {
 
 app.get("/score-risk", function(req, res) {
 	// get age, BMI, blood pressure, and family disease values
-	const { age, bmi, bp, fd } = req.query;
+	const { age: age_str, bmi, bp, fd } = req.query;
+	const age = parseInt(age_str);
 
 	// calculation
 	let score = 0;
