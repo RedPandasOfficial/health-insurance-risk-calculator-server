@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// Serve main page (Optional, mainly for testing)
+// Serve main page (mainly for testing)
 app.get("/", (req, res) => {
     res.sendFile("index.html", { root: __dirname });
 });
