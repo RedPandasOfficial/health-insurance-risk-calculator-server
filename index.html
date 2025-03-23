@@ -12,7 +12,7 @@
 			const age = parseInt(prompt("age"));
 			const bmi = prompt("BMI");
 			const bp = prompt("blood pressure");
-			const fd = prompt("family disease");
+			const fd = prompt("family disease, comma separated array");
 			const query =
 				`${window.location.origin}/score-risk?` +
 				`age=${age}&bmi=${bmi}&bp=${bp}&fd=${fd}`;
