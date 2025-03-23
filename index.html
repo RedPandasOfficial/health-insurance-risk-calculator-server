@@ -6,7 +6,22 @@
 	</head>
 	<body>
 		<script>
-			// Test code
+			// Test the /score-risk API
+			console.warn("Testing the /score-risk API");
+
+			const age = parseInt(prompt("age"));
+			const bmi = prompt("BMI");
+			const bp = prompt("blood pressure");
+			const fd = prompt("family disease");
+			const query =
+				`${window.location.origin}/score-risk?` +
+				`age=${age}&bmi=${bmi}&bp=${bp}&fd=${fd}`;
+			
+			console.log(query);
+			fetch(query)
+				.then(response => response.json())
+				.then(data => console.log(data))
+				.catch(error => console.error(error));
 		</script>
 	</body>
 </html>
