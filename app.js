@@ -17,10 +17,6 @@ app.get("/calculate-bmi", (req, res) => {
     let weight = parseFloat(req.query.weight); 
     let height = parseFloat(req.query.height);
 
-    if (isNaN(weight) || isNaN(height) || height <= 0) {
-        return res.status(400).json({ error: "Invalid input. Weight must be in pounds, height must be in feet." });
-    }
-
     let heightInches = height * 12;
     let bmiValue = (weight / (heightInches * heightInches)) * 703;
 
