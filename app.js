@@ -18,7 +18,8 @@ app.get("/calculate-bmi", (req, res) => {
     const feet = parseFloat(req.query.height_feet);
 	const inches = parseFloat(req.query.height_inches);
 
-    let bmiValue = (weight / (inches * inches)) * 703;
+	let totalInches = feet * 12 + inches;
+    let bmiValue = (weight / (totalInches * totalInches)) * 703;
 
     let bmiCategory;
     if (bmiValue < 25) {
