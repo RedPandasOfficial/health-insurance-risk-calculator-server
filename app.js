@@ -14,11 +14,11 @@ app.get("/", (req, res) => {
 
 // BMI Calculation Route
 app.get("/calculate-bmi", (req, res) => {
-    let weight = parseFloat(req.query.weight); 
-    let height = parseFloat(req.query.height);
+    const weight = parseFloat(req.query.weight_pounds); 
+    const feet = parseFloat(req.query.height_feet);
+	const inches = parseFloat(req.query.height_inches);
 
-    let heightInches = height * 12;
-    let bmiValue = (weight / (heightInches * heightInches)) * 703;
+    let bmiValue = (weight / (inches * inches)) * 703;
 
     let bmiCategory;
     if (bmiValue < 25) {
