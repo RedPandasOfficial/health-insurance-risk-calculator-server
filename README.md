@@ -5,7 +5,8 @@ The developers of this project, Health Insurance Risk Calculator Server, are Ben
 ## Statement of Originality
 All content in this project is original.
 
-## Instructions [WORK IN PROGRESS]
+## Instructions
+Clone this repository by running `git clone https://github.com/RedPandasOfficial/health-insurance-risk-calculator-server.git`. Navigate to the `health-insurance-risk-calculator-server` subdirectory. The required files for running this project locally are `app.js`, `index.html`, and the various JSON files. In `index.html` are some tests. To start the server, run `node app.js`.
 
 ## Additional Notes
 Our stories can be viewed in the Issues page. Their titles are of the format `#[ID] - [Story Points]: [Short Description of Story]`, and the stories themselves are of the standard story format.
