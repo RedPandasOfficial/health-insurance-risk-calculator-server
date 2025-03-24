@@ -75,3 +75,6 @@ app.get("/score-risk", function(req, res) {
 app.listen(port, function() {
 	console.log(`Server running on http://localhost:${port}`);
 });
+app.get("/ping", function(req, res) {
+	res.json({ success: true });
+  });
