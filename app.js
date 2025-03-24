@@ -7,9 +7,9 @@ app.use(express.json());
 
 const port = process.env.PORT || 3000;
 
-// Ensure Express only serves API requests
+// Serve main page (mainly for testing)
 app.get("/", (req, res) => {
-    res.send("Health Insurance Risk Calculator API is running!");
+    res.sendFile("index.html", { root: __dirname });
 });
 
 // BMI Calculation Route
@@ -71,6 +71,10 @@ app.get("/score-risk", function(req, res) {
     else { risk = "uninsurable"; }
 
     res.json({ score, risk });
+});
+
+app.get("/ping", function(req, res) {
+	res.json({ success: true });
 });
 
 app.listen(port, function() {
